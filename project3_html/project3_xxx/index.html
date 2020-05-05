@@ -2,47 +2,8 @@
 <head>
  <title>Ghost of the Deep Cover Page</title>
    <meta charset="utf-8" />
-<!-- <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-</script>
-<script>
+<script type="text/javascript" src="includeHTML.js"></script>
 
-$(function(){
-  $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
-});
-</script>  -->
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
 </head>
 <body>
    <div w3-include-html="header.html"></div> 
@@ -52,34 +13,6 @@ function includeHTML() {
 <script>
 includeHTML();
 </script>
-<!-- <div id="header"></div>
-   
-   <section>
-      <h1>Capt. Marvel and the Ghost of the Deep</h1>
-      <img src="images/gp_panel01.png" class="panel size1" alt="" />
-            <a href="#"><img src="images/gp_next.png" alt="next" /></a>
 
-   </section>
-   
-   <article>
-      <h1>Fawcett Comics</h1>
-      <p>One of the most successful comic book publisher in the 1940's, Fawcett Publications 
-         began in 1919 with the magazine, <cite>Captain Billy's Whiz Bang</cite>. Its total
-         circulation from all of its publications eventually reached over 10 million issues
-         a month.</p>
-      <p>Fawcett is best known for its popular superhero, Captain Marvel, based on the
-         adventures of radio reporter Billy Batson who would turn into Captain Marvel
-         upon uttering the word <em>Shazam!</em>. Other successful characters include
-         Ibis the Invincible, Hopalong Cassidy, and Mister Scarlet. Fawcett was also known 
-         for its series of horror comics including <cite>Beware! Terror Tales</cite>, 
-         <cite>Worlds of Fear</cite>, and <cite>Strange Suspense Stories</cite>. The
-         company branched out into humor comic magazines with <cite>Otis and Babs</cite> 
-         and <cite>Hoppy the Marvel Bunny</cite> among its most popular titles.</p>
-      <p>Facing declining sales, Fawcett Comics ceased publication of its superhero
-         titles in 1953. Several of its titles were eventually sold to Charlton
-         Comics.</p>
-   </article> 
-   
-  <div id="footer"></div>-->
 </body>
 </html>
